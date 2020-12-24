@@ -66,5 +66,4 @@ let searchBtn = document.getElementById("searchBtn").onclick = function() {
     console.log(cityName);
     var val = newCity(cityName);
     console.log(val);
-    
 }
