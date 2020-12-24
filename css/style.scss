@@ -2,19 +2,9 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-	background: linear-gradient(-45deg, red, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-    // .attribut-icon{
-    //     p{
-    //         margin: 0;
-    //     }
-    //     position: absolute;
-    //     margin-top: 50px;
-    //     bottom: 1%;
-    //     left: 5%;
-    //     font-size: .7em;
-    // }
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 
 @keyframes gradient {
 	0% {
@@ -30,38 +20,38 @@ body {
 
     .container-fluid{
         .row{
-            .fixed{
-              position: absolute;
-              right: 1%;
-            }
-            .bg{
-                position: relative;
-                top: 25px;
-                margin: 0 auto;
-                font-size: 5em;
-            }
-            .col-12{
-              
-                    background: rgba( 255, 255, 255, 0.25 );
-                    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-                    backdrop-filter: blur( 4px );
-                    -webkit-backdrop-filter: blur( 4px );
-                    border-radius: 10px;
+          .fixed{
+            position: absolute;
+            right: 1%;
+          }
+          .bg{
+              position: relative;
+              top: 25px;
+              margin: 0 auto;
+              font-size: 5em;
+          }
+          .col-12{
+            
+                  background: rgba( 255, 255, 255, 0.25 );
+                  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                  backdrop-filter: blur( 4px );
+                  -webkit-backdrop-filter: blur( 4px );
+                  border-radius: 10px;
 
 input{
    background: rgba(0, 0, 0, 0);
    outline: none;
    border: none;
-}   
+}
 .text{
     font-size: .7em !important;
 }
 
 .icon {
-  position: relative;
-  display: inline-block;
-  width: 12em;
-  height: 10em;
+  // position: relative;
+  // display: inline-block;
+  // width: 10em;
+  height: 8em;
   font-size: 1em; /* control icon size here */
 }
 .icon2 {

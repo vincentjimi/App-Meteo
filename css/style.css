@@ -65,10 +65,7 @@ body .container-fluid .row .col-12 .text {
 }
 
 body .container-fluid .row .col-12 .icon {
-  position: relative;
-  display: inline-block;
-  width: 12em;
-  height: 10em;
+  height: 8em;
   font-size: 1em;
   /* control icon size here */
 }
