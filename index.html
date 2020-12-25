@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon2" sizes="180x180" href="img/apple-touch-icon2.png">
-    <link rel="icon2" type="image/png" sizes="32x32" href="img/favicon2-32x32.png">
-    <link rel="icon2" type="image/png" sizes="16x16" href="img/favicon2-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon2-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon2-16x16.png">
     <link rel="manifest" href="img/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -15,6 +15,34 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 <div class="container-fluid">
     <div class="row p-1">
 
@@ -27,15 +55,19 @@
 
         <h1 class="text-white text-center bg">LA METEO</h1>
 
-        <div class="col-12 mx-0 mb-2">
+        <div class="col-12 mx-0 mb-3 mt-5">
             <form class="p-3 m-3 d-flex justify-content-center" action="">
-                <input id='search' class="w-75 border-bottom text-white mx-1" type="text" >
-                <input id='searchBtn' class="border rounded text-white mx-1" type="submit" value="search">
+                <input id='search' class="w-75 border-bottom text-white input mx-1" type="text" >
+                <input id='searchBtn' class="btn btn-outline-light btn-sm mx-1" type="submit" value="Search">
+                <input id='refreshBtn' class="btn btn-outline-light btn-sm mx-1" type="submit"  value="Refresh">
             </form>
         </div>
 
-        <div class="col-12 mx-0 mb-2 text-white d-flex align-items-center justify-content-between">
-            <h5 id="h_tmp" class="text-center display-4"></h5>
+        <div class="col-12 mx-0 mb-3 text-white d-flex align-items-center justify-content-between">
+           <div>
+               <h5 id="h_tmp" class=""></h5>
+               <p id="h_co" class=""></p>
+           </div> 
             <div id="h_condition" class=""> 
             </div>
             <div>
@@ -47,65 +79,49 @@
 
         </div>
 
-        <div class="col-12 mx-0 p-1 mb-2 bottom text-white">
+        <div class="col-12 mx-0 p-1 mb-3 bottom text-white">
 
-            <div class="row d-flex justify-content-center flex-nowrap px-2">
+            <div class="row d-flex justify-content-center">
+                        <div class="col-2 days">
+                            <h6></h6>
+                            <div class="icon2"></div> 
+                            <h6></h6>
+                            <h6></h6>
+                        </div>
+                        <div class="col-2 days">
+                            <h6></h6>
+                            <div class="icon2"></div> 
+                            <h6></h6>
+                            <h6></h6>
+                        </div>
+                        <div class="col-2 days">
+                            <h6></h6>
+                            <div class="icon2"></div> 
+                            <h6></h6>
+                            <h6></h6>
+                        </div>
+                        <div class="col-2 days">
+                            <h6></h6>
+                            <div class="icon2"></div> 
+                            <h6></h6>
+                            <h6></h6>
+                        </div>
+                        <div class="col-2 days">
+                            <h6></h6>
+                            <div class="icon2"></div> 
+                            <h6></h6>
+                            <h6></h6>
+                        </div>
+                    <!-- <div class="col p-3 my-3 mx-md-3 border-bottom mx-1 days">  
+                        <p class="text-center text mb-0 ">Demain</p>
+                        <div class="icon2">
 
-                    <div class="col p-3 my-3 mx-md-3 border-bottom mx-1 ">  
-                        <p class="text-center text mb-0">Demain</p>
-                        <div class="icon2 cloudy">
-                            <div class="cloud"></div>
-                            <div class="cloud"></div>
                         </div>       
                         <h5 class=" text mb-0">Min: 13 °C</h5>
                         <h5 class=" text mb-0">Max: 13 °C</h5>
 
-                    </div>
+                    </div> -->
                 
-                
-                    <div class="col p-3 my-3 mx-md-3 border-bottom mx-1 ">  
-                        <p class="text-center text mb-0">Demain</p>
-                            <div class="icon2 cloudy">
-                                <div class="cloud"></div>
-                                <div class="cloud"></div>
-                            </div> 
-                            <h5 class=" text mb-0">Min: 13 °C</h5>
-                            <h5 class=" text mb-0">Max: 13 °C</h5>
-
-                    </div>
-                    
-                    <div class="col p-3 my-3 mx-md-3  border-bottom mx-1 ">  
-                        <p class="text-center text mb-0">Demain</p>
-                        <div class="icon2 cloudy">
-                            <div class="cloud"></div>
-                            <div class="cloud"></div>
-                          </div>        
-                        <h5 class=" text mb-0">Min: 13 °C</h5>
-                        <h5 class=" text mb-0">Max: 13 °C</h5>
-
-                    </div>
-                    
-                    
-                    <div class="col p-3 my-3 mx-md-3  border-bottom mx-1 ">  
-                        <p class="text-center text mb-0">Demain</p>
-                        <div class="icon2 cloudy">
-                            <div class="cloud"></div>
-                            <div class="cloud"></div>
-                          </div>         
-                        <h5 class=" text mb-0">Min: 13 °C</h5>
-                        <h5 class=" text mb-0">Max: 13 °C</h5>
-                    </div>
-                    
-                    
-                    <div class="col p-3 my-3 mx-md-3  border-bottom mx-1 ">  
-                        <p class="text-center text mb-0">Demain</p>
-                        <div class="icon2 cloudy">
-                            <div class="cloud"></div>
-                            <div class="cloud"></div>
-                          </div>        
-                        <h5 class=" text mb-0">Min: 13 °C</h5>
-                        <h5 class=" text mb-0">Max: 13 °C</h5>
-                    </div>
                     
             </div>  
         </div>
@@ -145,8 +161,8 @@
   <div class="cloud"></div>
   <div class="rain"></div>
 </div> -->
-<div class="attribut-icon2 fixed-botto text-white">
-    <p>icon2 animations taken from <a href="https://codemyui.com/animated-weather-icon2s-in-css/" target="_blank">CodeMyUI</a> By Hima Vincent | icon2s based on <a href="https://dribbble.com/shots/2097042-Widget-Weather" target="_blank">Dribbble</a> by kylor</p>
+<div class="container-fluid attribut-icons">
+    <p class="w-100 text-center">icon2 animations taken from <a href="https://codemyui.com/animated-weather-icon2s-in-css/" target="_blank">CodeMyUI</a> By Hima Vincent | icon2s based on <a href="https://dribbble.com/shots/2097042-Widget-Weather" target="_blank">Dribbble</a> by kylor</p>
 </div>
 
 
