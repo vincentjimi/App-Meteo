@@ -69,7 +69,7 @@ body .container-fluid .row .btnApp {
 }
 
 body .container-fluid .row .days h6:nth-child(3), body .container-fluid .row .days h6:nth-child(4) {
-  font-size: .9em;
+  font-size: .7em;
 }
 
 body .container-fluid .row .input {
@@ -84,7 +84,7 @@ body .container-fluid .row .text {
 
 body .container-fluid .row .icon {
   height: 10em;
-  font-size: 1em;
+  font-size: .9em;
   /* control icon size here */
 }
 
@@ -767,5 +767,9 @@ body .container-fluid .row .flake:nth-child(2):after {
           transform-origin: -12vw 11vh;
   -webkit-box-shadow: 40vmin 0 5.9420960083040155vmin currentColor;
           box-shadow: 40vmin 0 5.9420960083040155vmin currentColor;
+}
+
+.main-content {
+  font-size: .8em;
 }
 /*# sourceMappingURL=style.css.map */

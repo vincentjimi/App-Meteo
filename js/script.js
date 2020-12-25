@@ -1845,7 +1845,7 @@ switch (day5_condition) {
                 const children3 = document.getElementsByClassName('days')[2].children;
                 const children4 = document.getElementsByClassName('days')[3].children;
                 const children5 = document.getElementsByClassName('days')[4].children;
-    	        console.log(children[i]);
+    	        // console.log(children[i]);
                 children[i].innerHTML = day1[i];
                 children2[i].innerHTML = day2[i];
                 children3[i].innerHTML = day3[i];
@@ -1871,7 +1871,7 @@ navigator.geolocation.getCurrentPosition(function (position){
     let lat = position.coords.latitude;
     let lng = position.coords.longitude;
     
-    console.log(lat, lng)
+    // console.log(lat, lng);
     
     // function loadDoc() {
     let url = 'https://us1.locationiq.com/v1/reverse.php?key=pk.692a8fe9601028b87a99e2ecfda07ac1&format=json&lat='+lat+'&lon='+lng;
@@ -1920,11 +1920,37 @@ let searchBtn = document.getElementById("searchBtn").onclick = function() {
 
 
 if('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('/sw.js')
-             .then(function() { console.log("Service Worker Registered"); });
+    navigator.serviceWorker.register('/sw.js')
+        .then((reg) =>  console.log("Service Worker Registered", reg))
+        .catch((err) => console.log("Service Worker not Registered", err));
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
   // fonction qui check si appli installable
   window.addEventListener('beforeinstallprompt', (e) => {
@@ -1939,7 +1965,7 @@ if('serviceWorker' in navigator) {
 function  showInstallPromotion() {
  //alert("ok on peut installer");
 
- $('#btnAdd').removeClass('d-none');
+ document.getElementById("btnAdd").classList.remove("d-none");
 
 }
 

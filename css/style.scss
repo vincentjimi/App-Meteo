@@ -43,12 +43,13 @@ body {
           backdrop-filter: blur( 4px );
           -webkit-backdrop-filter: blur( 4px );
           border-radius: 10px;
+
 .btnApp{
   position: relative;
   z-index: 500;
 }        
 .days h6:nth-child(3), .days h6:nth-child(4){
-  font-size: .9em;
+  font-size: .7em;
 }
 .input{
    background: rgba(0, 0, 0, 0);
@@ -64,7 +65,7 @@ body {
   // display: inline-block;
   // width: 10em;
   height: 10em;
-  font-size: 1em; /* control icon size here */
+  font-size: .9em; /* control icon size here */
 }
 .icon2{
   position: relative;
@@ -581,3 +582,6 @@ body {
 	box-shadow: 40vmin 0 5.9420960083040155vmin currentColor;
 }
 
+.main-content{
+  font-size: .8em;
+}

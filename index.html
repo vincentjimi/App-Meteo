@@ -11,7 +11,8 @@
     <link rel="manifest" href="/manifest.json">
     <!-- reuse same icon for Safari -->
     <link rel="apple-touch-icon" href="img/appMeteoIcon.png">
-    
+   <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+
     <!-- multiple icons for IE -->
     <meta name="msapplication-square310x310logo" content="img/appMeteoIcon.png">
     <link rel="apple-touch-icon" href="img/appMeteoIcon.png">
@@ -49,7 +50,7 @@
         <span></span>
       </div>
 <div class="container-fluid text-white">
-    <button ID="btnAdd" class="mt-1 btn btn-outline-light btnApp w-100 btn-sm">App<i class="bi bi-download"></i>
+    <button ID="btnAdd" class="mt-1 btn btn-outline-light btnApp w-100 btn-sm d-none">App<i class="bi bi-download"></i>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
         <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
         <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
@@ -59,7 +60,7 @@
 
         <h1 class="text-white text-center bg">LA METEO</h1>
 
-    <div class="row py-3 mx-0 mb-3 mt-5 d-flex justify-content-center">
+    <div class="row py-3 mx-0 mb-4 mt-5 d-flex justify-content-center">
         <div class="col-12">
             <form class="d-flex justify-content-center" action="">
                 <input id='search' class="w-75 border-bottom text-white input mx-1" type="text" >
@@ -69,7 +70,7 @@
         </div>
     </div>
 
-    <div class="row p-3 mx-0 mb-3 d-flex align-items-center justify-content-between">
+    <div class="row p-3 mx-0 mb-4 d-flex align-items-center justify-content-between main-content">
         <div lass="col">
             <h5 id="h_tmp" class=""></h5>
             <p id="h_co" class=""></p>
@@ -84,31 +85,31 @@
 
 
     <div class="row py-3 mx-0 d-flex justify-content-between">
-        <div class="col-2 mx-0 days text-center">
+        <div class="col-2 mx-0 days">
             <h6></h6>
             <div class="icon2"></div> 
             <h6></h6>
             <h6></h6>
         </div>
-        <div class="col-2 mx-0 days text-center">
+        <div class="col-2 mx-0 days">
             <h6></h6>
             <div class="icon2"></div> 
             <h6></h6>
             <h6></h6>
         </div>
-        <div class="col-2 mx-0 days text-center">
+        <div class="col-2 mx-0 days">
             <h6></h6>
             <div class="icon2"></div> 
             <h6></h6>
             <h6></h6>
         </div>
-        <div class="col-2 mx-0 days text-center">
+        <div class="col-2 mx-0 days">
             <h6></h6>
             <div class="icon2"></div> 
             <h6></h6>
             <h6></h6>
         </div>
-        <div class="col-2 mx-0 days text-center">
+        <div class="col-2 mx-0 days">
             <h6></h6>
             <div class="icon2"></div> 
             <h6></h6>
