@@ -13,40 +13,21 @@
     <script src="https://kit.fontawesome.com/39f0c3e5ce.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ff00ff"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon2.png">
+    <!-- multiple icons for IE -->
+    <meta name="msapplication-square310x310logo" content="android-chrome-192x192.png">
+    <meta name="msapplication-square70x70logo" content="android-chrome-192x192.png">
+    <meta name="msapplication-square150x150logo" content="android-chrome-192x192.png">
+    <meta name="msapplication-wide310x150logo" content="android-chrome-192x192.png">
 </head>
 <body>
-    <div class="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+   
 <div class="container-fluid">
     <div class="row p-1">
 
-        <button class="btn btn-outline-light fixed w-25 btn-sm">App<i class="bi bi-download"></i>
+        <button ID="btnAdd" class="btn btn-outline-light fixed w-25 btn-sm">App<i class="bi bi-download"></i>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
             <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
@@ -54,120 +35,75 @@
         </button>
 
         <h1 class="text-white text-center bg">LA METEO</h1>
+    </div>
 
-        <div class="col-12 mx-0 mb-3 mt-5">
-            <form class="p-3 m-3 d-flex justify-content-center" action="">
-                <input id='search' class="w-75 border-bottom text-white input mx-1" type="text" >
-                <input id='searchBtn' class="btn btn-outline-light btn-sm mx-1" type="submit" value="Search">
-                <input id='refreshBtn' class="btn btn-outline-light btn-sm mx-1" type="submit"  value="Refresh">
-            </form>
+    <div class="row mx-0 mb-3 mt-5">
+        <form class="p-3 m-3 d-flex justify-content-center" action="">
+            <input id='search' class="w-75 border-bottom text-white input mx-1" type="text" >
+            <input id='searchBtn' class="btn btn-outline-light btn-sm mx-1" type="submit" value="Search">
+            <input id='refreshBtn' class="btn btn-outline-light btn-sm mx-1" type="submit"  value="Refresh">
+        </form>
+    </div>
+
+    <div class="row mx-0 mb-3 text-white d-flex align-items-center justify-content-between">
+        <div lass="col">
+            <h5 id="h_tmp" class=""></h5>
+            <p id="h_co" class=""></p>
+        </div> 
+        <div id="h_condition" class="col"> 
         </div>
-
-        <div class="col-12 mx-0 mb-3 text-white d-flex align-items-center justify-content-between">
-           <div>
-               <h5 id="h_tmp" class=""></h5>
-               <p id="h_co" class=""></p>
-           </div> 
-            <div id="h_condition" class=""> 
-            </div>
-            <div>
-                <p id="h_date" class="text-center mb-0"></p>
-                <p id="h_city" class="text-center mb-0"></p>
-            </div>
-                
-
-
-        </div>
-
-        <div class="col-12 mx-0 p-1 mb-3 bottom text-white">
-
-            <div class="row d-flex justify-content-center">
-                        <div class="col-2 days">
-                            <h6></h6>
-                            <div class="icon2"></div> 
-                            <h6></h6>
-                            <h6></h6>
-                        </div>
-                        <div class="col-2 days">
-                            <h6></h6>
-                            <div class="icon2"></div> 
-                            <h6></h6>
-                            <h6></h6>
-                        </div>
-                        <div class="col-2 days">
-                            <h6></h6>
-                            <div class="icon2"></div> 
-                            <h6></h6>
-                            <h6></h6>
-                        </div>
-                        <div class="col-2 days">
-                            <h6></h6>
-                            <div class="icon2"></div> 
-                            <h6></h6>
-                            <h6></h6>
-                        </div>
-                        <div class="col-2 days">
-                            <h6></h6>
-                            <div class="icon2"></div> 
-                            <h6></h6>
-                            <h6></h6>
-                        </div>
-                    <!-- <div class="col p-3 my-3 mx-md-3 border-bottom mx-1 days">  
-                        <p class="text-center text mb-0 ">Demain</p>
-                        <div class="icon2">
-
-                        </div>       
-                        <h5 class=" text mb-0">Min: 13 °C</h5>
-                        <h5 class=" text mb-0">Max: 13 °C</h5>
-
-                    </div> -->
-                
-                    
-            </div>  
+        <div lass="col">
+            <p id="h_date" class="text-center mb-0"></p>
+            <p id="h_city" class="text-center mb-0"></p>
         </div>
     </div>
-</div>
+
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-2 days">
+            <h6></h6>
+            <div class="icon2"></div> 
+            <h6></h6>
+            <h6></h6>
+        </div>
+        <div class="col-2 days">
+            <h6></h6>
+            <div class="icon2"></div> 
+            <h6></h6>
+            <h6></h6>
+        </div>
+        <div class="col-2 days">
+            <h6></h6>
+            <div class="icon2"></div> 
+            <h6></h6>
+            <h6></h6>
+        </div>
+        <div class="col-2 days">
+            <h6></h6>
+            <div class="icon2"></div> 
+            <h6></h6>
+            <h6></h6>
+        </div>
+        <div class="col-2 days">
+            <h6></h6>
+            <div class="icon2"></div> 
+            <h6></h6>
+            <h6></h6>
+        </div>
+    </div>
+
+</div><!-- End of container-fluid -->
+
     
-    
-    <!-- 
-        <div class="icon2 thunder-storm">
-            <div class="cloud"></div>
-            <div class="lightning">
-    <div class="bolt"></div>
-    <div class="bolt"></div>
-</div>
-</div>
-
-<div class="icon2 cloudy">
-  <div class="cloud"></div>
-  <div class="cloud"></div>
-</div>
-
-<div class="icon2 flurries">
-  <div class="cloud"></div>
-  <div class="snow">
-    <div class="flake"></div>
-    <div class="flake"></div>
-  </div>
-</div>
-
-<div class="icon2 sunny">
-  <div class="sun">
-    <div class="rays"></div>
-  </div>
-</div>
-
-<div class="icon2 rainy">
-  <div class="cloud"></div>
-  <div class="rain"></div>
-</div> -->
+  
 <div class="container-fluid attribut-icons">
     <p class="w-100 text-center">icon2 animations taken from <a href="https://codemyui.com/animated-weather-icon2s-in-css/" target="_blank">CodeMyUI</a> By Hima Vincent | icon2s based on <a href="https://dribbble.com/shots/2097042-Widget-Weather" target="_blank">Dribbble</a> by kylor</p>
 </div>
 
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="sw.js"></script>
 </body>
 </html>
