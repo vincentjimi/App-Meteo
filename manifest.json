@@ -5,7 +5,7 @@
     "icons": [
     
       {
-        "src": "/pwaImg.png",
+        "src": "img/appMeteoIcon.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "any maskable" 

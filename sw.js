@@ -4,7 +4,7 @@ self.addEventListener('install', function(e) {
       caches.open('cache-man').then(function(cache) {
         return cache.addAll([
           '/',
-          '/img/',
+          '/img',
           '/index.html',
           '/css/bootstrap.min.css',
           '/css/style.css',

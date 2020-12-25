@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -18,6 +19,8 @@ body {
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
           animation: gradient 15s ease infinite;
+  font-size: .8em;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 @-webkit-keyframes gradient {
@@ -44,6 +47,12 @@ body {
   }
 }
 
+body .container-fluid .bg {
+  position: relative;
+  top: 68px;
+  font-size: 5em;
+}
+
 body .container-fluid .row {
   background: rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -54,14 +63,8 @@ body .container-fluid .row {
   /* Animations */
 }
 
-body .container-fluid .row .fixed {
-  position: absolute;
-  right: 1%;
-}
-
-body .container-fluid .row .bg {
-  position: relative;
-  top: 70px;
+body .container-fluid .row .days h6:nth-child(3), body .container-fluid .row .days h6:nth-child(4) {
+  font-size: .9em;
 }
 
 body .container-fluid .row .input {
