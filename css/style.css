@@ -63,6 +63,11 @@ body .container-fluid .row {
   /* Animations */
 }
 
+body .container-fluid .row .btnApp {
+  position: relative;
+  z-index: 500;
+}
+
 body .container-fluid .row .days h6:nth-child(3), body .container-fluid .row .days h6:nth-child(4) {
   font-size: .9em;
 }
@@ -464,6 +469,7 @@ body .container-fluid .row .flake:nth-child(2):after {
   top: 0;
   left: 0;
   overflow: hidden;
+  z-index: -500;
 }
 
 .background span {

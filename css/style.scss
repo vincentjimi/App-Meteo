@@ -43,7 +43,10 @@ body {
           backdrop-filter: blur( 4px );
           -webkit-backdrop-filter: blur( 4px );
           border-radius: 10px;
-            
+.btnApp{
+  position: relative;
+  z-index: 500;
+}        
 .days h6:nth-child(3), .days h6:nth-child(4){
   font-size: .9em;
 }
@@ -381,7 +384,8 @@ body {
 	// background: $blue;
 	// background: #016d33;
 	// background: #3e1e68;
-	overflow: hidden;
+  overflow: hidden;
+  z-index: -500;
 }
 
 .background span {
