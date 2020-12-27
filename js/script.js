@@ -202,65 +202,65 @@ function newCity(ville) {
             
             
             
-            let icon2= "";
-            switch (day1_condition) {
-                case 'Ensoleillé':
-                case 'Nuit claire':
-                icon2 = weather2.sunny;
-                break;
-    /*--------------------------------------------------------------*/
-                case 'Averses de pluie faible':
-                case 'Averses de pluie modérée':
+    //         let icon2= "";
+    //         switch (day1_condition) {
+    //             case 'Ensoleillé':
+    //             case 'Nuit claire':
+    //             icon2 = weather2.sunny;
+    //             break;
+    // /*--------------------------------------------------------------*/
+    //             case 'Averses de pluie faible':
+    //             case 'Averses de pluie modérée':
     
-                icon2 = weather2.sunShower;
-                break;
-    /*--------------------------------------------------------------*/
-                case 'Ciel voilé':
-                case 'Nuit légèrement voilée':
-                case 'Faibles passages nuageux':
-                case 'Nuit bien dégagée':
-                case 'Stratus':
-                case 'Stratus se dissipant':
-                case 'Nuit claire et stratus':
-                case 'Eclaircies':
+    //             icon2 = weather2.sunShower;
+    //             break;
+    // /*--------------------------------------------------------------*/
+    //             case 'Ciel voilé':
+    //             case 'Nuit légèrement voilée':
+    //             case 'Faibles passages nuageux':
+    //             case 'Nuit bien dégagée':
+    //             case 'Stratus':
+    //             case 'Stratus se dissipant':
+    //             case 'Nuit claire et stratus':
+    //             case 'Eclaircies':
 
-                icon2 = weather2.sunShowerNoRain;
-                break;
-    /*--------------------------------------------------------------*/
-                case 'Nuit avec averses':
-                case 'Averses de pluie forte':
-                case 'Couvert avec averses':
-                case 'Faiblement orageux':
-                case 'Nuit faiblement orageuse':
-                case 'Orage modéré':
-                case 'Fortement orageux':
+    //             icon2 = weather2.sunShowerNoRain;
+    //             break;
+    // /*--------------------------------------------------------------*/
+    //             case 'Nuit avec averses':
+    //             case 'Averses de pluie forte':
+    //             case 'Couvert avec averses':
+    //             case 'Faiblement orageux':
+    //             case 'Nuit faiblement orageuse':
+    //             case 'Orage modéré':
+    //             case 'Fortement orageux':
                     
-                icon2 = weather2.thunderStorm;
-                break;
-    /*--------------------------------------------------------------*/
-                case 'Averses de neige faible':
-                case 'Nuit avec averses de neige faible':
-                case 'Neige faible':
-                case 'Neige modérée':
-                case 'Neige forte':
-                case 'Pluie et neige mêlée faible':
-                case 'Pluie et neige mêlée modérée':
-                case 'Pluie et neige mêlée forte':
+    //             icon2 = weather2.thunderStorm;
+    //             break;
+    // /*--------------------------------------------------------------*/
+    //             case 'Averses de neige faible':
+    //             case 'Nuit avec averses de neige faible':
+    //             case 'Neige faible':
+    //             case 'Neige modérée':
+    //             case 'Neige forte':
+    //             case 'Pluie et neige mêlée faible':
+    //             case 'Pluie et neige mêlée modérée':
+    //             case 'Pluie et neige mêlée forte':
                     
-                icon2 = weather2.flurries;
-                break;
-    /*--------------------------------------------------------------*/
+    //             icon2 = weather2.flurries;
+    //             break;
+    // /*--------------------------------------------------------------*/
                 
-                case 'Pluie forte':
-                case 'Pluie modérée':
-                case 'Pluie faible':
+    //             case 'Pluie forte':
+    //             case 'Pluie modérée':
+    //             case 'Pluie faible':
     
-                icon2 = weather2.rainy;
-                break;
-    /*--------------------------------------------------------------*/
-                default:
-                icon2 = weather2.cloudy;
-            }
+    //             icon2 = weather2.rainy;
+    //             break;
+    // /*--------------------------------------------------------------*/
+    //             default:
+    //             icon2 = weather2.cloudy;
+    //         }
             
 ////////////////////////////////////////////////////////////////////////////////////////
                 
@@ -518,11 +518,11 @@ function newCity(ville) {
             
             
             
-            let day1 = [temp.fcst_day_0.day_short, icon2, "Max "+temp.fcst_day_0.tmax, "Min "+temp.fcst_day_0.tmin];
-            let day2 = [temp.fcst_day_1.day_short, icon3, "Max "+temp.fcst_day_1.tmax, "Min "+temp.fcst_day_1.tmin];
-            let day3 = [temp.fcst_day_2.day_short, icon4, "Max "+temp.fcst_day_2.tmax, "Min "+temp.fcst_day_2.tmin];
-            let day4 = [temp.fcst_day_3.day_short, icon5, "Max "+temp.fcst_day_3.tmax, "Min "+temp.fcst_day_3.tmin];
-            let day5 = [temp.fcst_day_4.day_short, icon6, "Max "+temp.fcst_day_4.tmax, "Min "+temp.fcst_day_4.tmin];
+            // let day1 = [temp.fcst_day_0.day_short, icon2, "Max "+temp.fcst_day_0.tmax, "Min "+temp.fcst_day_0.tmin];
+            let day1 = [temp.fcst_day_1.day_short, icon3, "Max "+temp.fcst_day_1.tmax, "Min "+temp.fcst_day_1.tmin];
+            let day2 = [temp.fcst_day_2.day_short, icon4, "Max "+temp.fcst_day_2.tmax, "Min "+temp.fcst_day_2.tmin];
+            let day3 = [temp.fcst_day_3.day_short, icon5, "Max "+temp.fcst_day_3.tmax, "Min "+temp.fcst_day_3.tmin];
+            let day4 = [temp.fcst_day_4.day_short, icon6, "Max "+temp.fcst_day_4.tmax, "Min "+temp.fcst_day_4.tmin];
             // console.log(day1);
 
 
@@ -531,13 +531,14 @@ function newCity(ville) {
                 const children2 = document.getElementsByClassName('days')[1].children;
                 const children3 = document.getElementsByClassName('days')[2].children;
                 const children4 = document.getElementsByClassName('days')[3].children;
-                const children5 = document.getElementsByClassName('days')[4].children;
-    	        // console.log(children[i]);
+                // const children5 = document.getElementsByClassName('days')[4].children;
+                // console.log(children[i]);
+                
                 children[i].innerHTML = day1[i];
                 children2[i].innerHTML = day2[i];
                 children3[i].innerHTML = day3[i];
                 children4[i].innerHTML = day4[i];
-                children5[i].innerHTML = day5[i];
+                // children5[i].innerHTML = day5[i];
             }
 
         }
