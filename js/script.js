@@ -29,1807 +29,494 @@ function newCity(ville) {
             let day4_condition = temp.fcst_day_3.condition;
             let day5_condition = temp.fcst_day_4.condition;
 
+            weather = {
+                sunny: `<div class="icon sunny">
+                            <div class="sun">
+                                <div class="rays"></div>
+                            </div>
+                        </div>
+                        `,
+                sunShower: `<div class="icon sun-shower">
+                        <div class="cloud"></div>
+                        <div class="sun">
+                            <div class="rays"></div>
+                        </div>
+                        <div class="rain"></div>
+                        </div>
+                        `,
+                sunShowerNoRain: `<div class="icon sun-shower">
+                            <div class="cloud"></div>
+                            <div class="sun">
+                                <div class="rays"></div>
+                            </div>
+                            </div>
+                            `,
+                thunderStorm: `<div class="icon thunder-storm">
+                        <div class="cloud"></div>
+                        <div class="lightning">
+                        <div class="bolt"></div>
+                        <div class="bolt"></div>
+                        </div>
+                    </div>
+                    `,
+                flurries: `<div class="icon flurries">
+                            <div class="cloud"></div>
+                            <div class="snow">
+                            <div class="flake"></div>
+                            <div class="flake"></div>
+                            </div>
+                        </div>
+                        `,
+                rainy: `<div class="icon rainy">
+                            <div class="cloud"></div>
+                            <div class="rain"></div>
+                        </div>
+                        `,
+                cloudy: `<div class="icon cloudy">
+                            <div class="cloud"></div>
+                            <div class="cloud"></div>
+                        </div>
+                        `
+            }// End of weather object
+
+            weather2 = {
+                sunny: `<div class="icon2 sunny">
+                            <div class="sun">
+                                <div class="rays"></div>
+                            </div>
+                        </div>
+                        `,
+                sunShower: `<div class="icon2 sun-shower">
+                        <div class="cloud"></div>
+                        <div class="sun">
+                            <div class="rays"></div>
+                        </div>
+                        <div class="rain"></div>
+                        </div>
+                        `,
+                sunShowerNoRain: `<div class="icon2 sun-shower">
+                            <div class="cloud"></div>
+                            <div class="sun">
+                                <div class="rays"></div>
+                            </div>
+                            </div>
+                            `,
+                thunderStorm: `<div class="icon2 thunder-storm">
+                        <div class="cloud"></div>
+                        <div class="lightning">
+                        <div class="bolt"></div>
+                        <div class="bolt"></div>
+                        </div>
+                    </div>
+                    `,
+                flurries: `<div class="icon2 flurries">
+                            <div class="cloud"></div>
+                            <div class="snow">
+                            <div class="flake"></div>
+                            <div class="flake"></div>
+                            </div>
+                        </div>
+                        `,
+                rainy: `<div class="icon2 rainy">
+                            <div class="cloud"></div>
+                            <div class="rain"></div>
+                        </div>
+                        `,
+                cloudy: `<div class="icon2 cloudy">
+                            <div class="cloud"></div>
+                            <div class="cloud"></div>
+                        </div>
+                        `
+            }// End of weather2 object
 
 
+            
             let icon= "";
             switch (condition) {
                 case 'Ensoleillé':
-                  icon = `<div class="icon sunny">
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                          </div>
-                          `;
-                    break;
                 case 'Nuit claire':
-                  icon = `<div class="icon sunny">
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                          </div>
-                          `;
-                    break;
+                icon = weather.sunny;
+                break;
     /*--------------------------------------------------------------*/
                 case 'Averses de pluie faible':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            <div class="rain"></div>
-                            </div>
-                    	    `;
-                  break;
                 case 'Averses de pluie modérée':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            <div class="rain"></div>
-                            </div>
-                    	    `;
-                  break;
+    
+                icon = weather.sunShower;
+                break;
     /*--------------------------------------------------------------*/
                 case 'Ciel voilé':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
                 case 'Nuit légèrement voilée':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
                 case 'Faibles passages nuageux':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
                 case 'Nuit bien dégagée':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
                 case 'Stratus':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
                 case 'Stratus se dissipant':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
                 case 'Nuit claire et stratus':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
                 case 'Eclaircies':
-                    icon = `<div class="icon sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
+
+                icon = weather.sunShowerNoRain;
+                break;
     /*--------------------------------------------------------------*/
                 case 'Nuit avec averses':
-                    icon = `<div class="icon thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Averses de pluie forte':
-                    icon = `<div class="icon thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Couvert avec averses':
-                    icon = `<div class="icon thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Faiblement orageux':
-                    icon = `<div class="icon thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Nuit faiblement orageuse':
-                    icon = `<div class="icon thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Orage modéré':
-                    icon = `<div class="icon thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Fortement orageux':
-                    icon = `<div class="icon thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
+                    
+                icon = weather.thunderStorm;
+                break;
     /*--------------------------------------------------------------*/
                 case 'Averses de neige faible':
-                    icon = `<div class="icon flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Nuit avec averses de neige faible':
-                    icon = `<div class="icon flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Neige faible':
-                    icon = `<div class="icon flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Neige modérée':
-                    icon = `<div class="icon flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Neige forte':
-                    icon = `<div class="icon flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Pluie et neige mêlée faible':
-                    icon = `<div class="icon flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Pluie et neige mêlée modérée':
-                    icon = `<div class="icon flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Pluie et neige mêlée forte':
-                    icon = `<div class="icon flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
+                    
+                icon = weather.flurries;
+                break;
     /*--------------------------------------------------------------*/
                 
                 case 'Pluie forte':
-                    icon = `<div class="icon rainy">
-                                <div class="cloud"></div>
-                                <div class="rain"></div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Pluie modérée':
-                    icon = `<div class="icon rainy">
-                                <div class="cloud"></div>
-                                <div class="rain"></div>
-                            </div>
-                    	    `;
-                    break;
                 case 'Pluie faible':
-                    icon = `<div class="icon rainy">
-                                <div class="cloud"></div>
-                                <div class="rain"></div>
-                            </div>
-                    	    `;
-                    break;
-    /*--------------------------------------------------------------*/
-                default:
-                  icon = `<div class="icon cloudy">
-                            <div class="cloud"></div>
-                            <div class="cloud"></div>
-                        </div>
-                        `;
-            }
-            
-            
-            
-            ////////////////////////////////////////////////////////////////////////////////////////////
-            let icon2= "";
-            switch (day1_condition) {
-                case 'Ensoleillé':
-                  icon2 = `<div class="icon2 sunny">
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                          </div>
-                          `;
-                    break;
-                case 'Nuit claire':
-                  icon2 = `<div class="icon2 sunny">
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                          </div>
-                          `;
-                    break;
-    /*--------------------------------------------------------------*/
-                case 'Averses de pluie faible':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            <div class="rain"></div>
-                            </div>
-                    	    `;
-                  break;
-                case 'Averses de pluie modérée':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            <div class="rain"></div>
-                            </div>
-                    	    `;
-                  break;
-    /*--------------------------------------------------------------*/
-                case 'Ciel voilé':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
-                case 'Nuit légèrement voilée':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
-                case 'Faibles passages nuageux':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
-                case 'Nuit bien dégagée':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
-                case 'Stratus':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
-                case 'Stratus se dissipant':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
-                case 'Nuit claire et stratus':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
-                case 'Eclaircies':
-                    icon2 = `<div class="icon2 sun-shower">
-                            <div class="cloud"></div>
-                            <div class="sun">
-                                <div class="rays"></div>
-                            </div>
-                            </div>
-                    	    `;
-                  break;
-    /*--------------------------------------------------------------*/
-                case 'Nuit avec averses':
-                    icon2 = `<div class="icon2 thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Averses de pluie forte':
-                    icon2 = `<div class="icon2 thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Couvert avec averses':
-                    icon2 = `<div class="icon2 thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Faiblement orageux':
-                    icon2 = `<div class="icon2 thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Nuit faiblement orageuse':
-                    icon2 = `<div class="icon2 thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Orage modéré':
-                    icon2 = `<div class="icon2 thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Fortement orageux':
-                    icon2 = `<div class="icon2 thunder-storm">
-                                <div class="cloud"></div>
-                                <div class="lightning">
-                                <div class="bolt"></div>
-                                <div class="bolt"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-    /*--------------------------------------------------------------*/
-                case 'Averses de neige faible':
-                    icon2 = `<div class="icon2 flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Nuit avec averses de neige faible':
-                    icon2 = `<div class="icon2 flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Neige faible':
-                    icon2 = `<div class="icon2 flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Neige modérée':
-                    icon2 = `<div class="icon2 flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Neige forte':
-                    icon2 = `<div class="icon2 flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Pluie et neige mêlée faible':
-                    icon2 = `<div class="icon2 flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Pluie et neige mêlée modérée':
-                    icon2 = `<div class="icon2 flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Pluie et neige mêlée forte':
-                    icon2 = `<div class="icon2 flurries">
-                                <div class="cloud"></div>
-                                <div class="snow">
-                                <div class="flake"></div>
-                                <div class="flake"></div>
-                                </div>
-                            </div>
-                    	    `;
-                    break;
-    /*--------------------------------------------------------------*/
-                
-                case 'Pluie forte':
-                    icon2 = `<div class="icon2 rainy">
-                                <div class="cloud"></div>
-                                <div class="rain"></div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Pluie modérée':
-                    icon2 = `<div class="icon2 rainy">
-                                <div class="cloud"></div>
-                                <div class="rain"></div>
-                            </div>
-                    	    `;
-                    break;
-                case 'Pluie faible':
-                    icon2 = `<div class="icon2 rainy">
-                                <div class="cloud"></div>
-                                <div class="rain"></div>
-                            </div>
-                    	    `;
-                    break;
-    /*--------------------------------------------------------------*/
-                default:
-                  icon2 = `<div class="icon2 cloudy">
-                            <div class="cloud"></div>
-                            <div class="cloud"></div>
-                        </div>
-                        `;
-            }
-//////////////////////////////////////////////////////////////////////////////
-let icon3= "";
-switch (day2_condition) {
-    case 'Ensoleillé':
-      icon3 = `<div class="icon2 sunny">
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-              </div>
-              `;
-        break;
-    case 'Nuit claire':
-      icon3 = `<div class="icon2 sunny">
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-              </div>
-              `;
-        break;
-/*--------------------------------------------------------------*/
-    case 'Averses de pluie faible':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                <div class="rain"></div>
-                </div>
-                `;
-      break;
-    case 'Averses de pluie modérée':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                <div class="rain"></div>
-                </div>
-                `;
-      break;
-/*--------------------------------------------------------------*/
-    case 'Ciel voilé':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit légèrement voilée':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Faibles passages nuageux':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit bien dégagée':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Stratus':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Stratus se dissipant':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit claire et stratus':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Eclaircies':
-        icon3 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-/*--------------------------------------------------------------*/
-    case 'Nuit avec averses':
-        icon3 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Averses de pluie forte':
-        icon3 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Couvert avec averses':
-        icon3 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Faiblement orageux':
-        icon3 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Nuit faiblement orageuse':
-        icon3 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Orage modéré':
-        icon3 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Fortement orageux':
-        icon3 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    case 'Averses de neige faible':
-        icon3 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Nuit avec averses de neige faible':
-        icon3 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige faible':
-        icon3 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige modérée':
-        icon3 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige forte':
-        icon3 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée faible':
-        icon3 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée modérée':
-        icon3 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée forte':
-        icon3 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
     
-    case 'Pluie forte':
-        icon3 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-    case 'Pluie modérée':
-        icon3 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-    case 'Pluie faible':
-        icon3 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    default:
-      icon3 = `<div class="icon2 cloudy">
-                <div class="cloud"></div>
-                <div class="cloud"></div>
-            </div>
-            `;
+                icon = weather.rainy;
+                break;
+    /*--------------------------------------------------------------*/
+                default:
+                icon = weather.cloudy;
             }
             
 
-/////////////////////////////////////////////////////////////////////////////
 
-let icon4= "";
-switch (day3_condition) {
-    case 'Ensoleillé':
-      icon4 = `<div class="icon2 sunny">
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-              </div>
-              `;
-        break;
-    case 'Nuit claire':
-      icon4 = `<div class="icon2 sunny">
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-              </div>
-              `;
-        break;
-/*--------------------------------------------------------------*/
-    case 'Averses de pluie faible':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                <div class="rain"></div>
-                </div>
-                `;
-      break;
-    case 'Averses de pluie modérée':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                <div class="rain"></div>
-                </div>
-                `;
-      break;
-/*--------------------------------------------------------------*/
-    case 'Ciel voilé':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit légèrement voilée':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Faibles passages nuageux':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit bien dégagée':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Stratus':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Stratus se dissipant':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit claire et stratus':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Eclaircies':
-        icon4 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-/*--------------------------------------------------------------*/
-    case 'Nuit avec averses':
-        icon4 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Averses de pluie forte':
-        icon4 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Couvert avec averses':
-        icon4 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Faiblement orageux':
-        icon4 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Nuit faiblement orageuse':
-        icon4 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Orage modéré':
-        icon4 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Fortement orageux':
-        icon4 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    case 'Averses de neige faible':
-        icon4 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Nuit avec averses de neige faible':
-        icon4 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige faible':
-        icon4 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige modérée':
-        icon4 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige forte':
-        icon4 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée faible':
-        icon4 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée modérée':
-        icon4 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée forte':
-        icon4 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    
-    case 'Pluie forte':
-        icon4 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-    case 'Pluie modérée':
-        icon4 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-    case 'Pluie faible':
-        icon4 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    default:
-      icon4 = `<div class="icon2 cloudy">
-                <div class="cloud"></div>
-                <div class="cloud"></div>
-            </div>
-            `;
-}
-/////////////////////////////////////////////////////////////////////////
-            
-    
-let icon5= "";
-switch (day4_condition) {
-    case 'Ensoleillé':
-      icon5 = `<div class="icon2 sunny">
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-              </div>
-              `;
-        break;
-    case 'Nuit claire':
-      icon5 = `<div class="icon2 sunny">
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-              </div>
-              `;
-        break;
-/*--------------------------------------------------------------*/
-    case 'Averses de pluie faible':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                <div class="rain"></div>
-                </div>
-                `;
-      break;
-    case 'Averses de pluie modérée':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                <div class="rain"></div>
-                </div>
-                `;
-      break;
-/*--------------------------------------------------------------*/
-    case 'Ciel voilé':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit légèrement voilée':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Faibles passages nuageux':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit bien dégagée':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Stratus':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Stratus se dissipant':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit claire et stratus':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Eclaircies':
-        icon5 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-/*--------------------------------------------------------------*/
-    case 'Nuit avec averses':
-        icon5 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Averses de pluie forte':
-        icon5 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Couvert avec averses':
-        icon5 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Faiblement orageux':
-        icon5 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Nuit faiblement orageuse':
-        icon5 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Orage modéré':
-        icon5 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Fortement orageux':
-        icon5 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    case 'Averses de neige faible':
-        icon5 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Nuit avec averses de neige faible':
-        icon5 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige faible':
-        icon5 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige modérée':
-        icon5 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige forte':
-        icon5 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée faible':
-        icon5 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée modérée':
-        icon5 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée forte':
-        icon5 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    
-    case 'Pluie forte':
-        icon5 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-    case 'Pluie modérée':
-        icon5 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-    case 'Pluie faible':
-        icon5 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    default:
-      icon5 = `<div class="icon2 cloudy">
-                <div class="cloud"></div>
-                <div class="cloud"></div>
-            </div>
-            `;
-}
-/////////////////////////////////////////////////////////////////////////
-           
-            
-let icon6= "";
-switch (day5_condition) {
-    case 'Ensoleillé':
-      icon6 = `<div class="icon2 sunny">
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-              </div>
-              `;
-        break;
-    case 'Nuit claire':
-      icon6 = `<div class="icon2 sunny">
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-              </div>
-              `;
-        break;
-/*--------------------------------------------------------------*/
-    case 'Averses de pluie faible':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                <div class="rain"></div>
-                </div>
-                `;
-      break;
-    case 'Averses de pluie modérée':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                <div class="rain"></div>
-                </div>
-                `;
-      break;
-/*--------------------------------------------------------------*/
-    case 'Ciel voilé':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit légèrement voilée':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Faibles passages nuageux':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit bien dégagée':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Stratus':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Stratus se dissipant':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Nuit claire et stratus':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-    case 'Eclaircies':
-        icon6 = `<div class="icon2 sun-shower">
-                <div class="cloud"></div>
-                <div class="sun">
-                    <div class="rays"></div>
-                </div>
-                </div>
-                `;
-      break;
-/*--------------------------------------------------------------*/
-    case 'Nuit avec averses':
-        icon6 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Averses de pluie forte':
-        icon6 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Couvert avec averses':
-        icon6 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Faiblement orageux':
-        icon6 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Nuit faiblement orageuse':
-        icon6 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Orage modéré':
-        icon6 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Fortement orageux':
-        icon6 = `<div class="icon2 thunder-storm">
-                    <div class="cloud"></div>
-                    <div class="lightning">
-                    <div class="bolt"></div>
-                    <div class="bolt"></div>
-                    </div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    case 'Averses de neige faible':
-        icon6 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Nuit avec averses de neige faible':
-        icon6 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige faible':
-        icon6 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige modérée':
-        icon6 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Neige forte':
-        icon6 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée faible':
-        icon6 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée modérée':
-        icon6 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-    case 'Pluie et neige mêlée forte':
-        icon6 = `<div class="icon2 flurries">
-                    <div class="cloud"></div>
-                    <div class="snow">
-                    <div class="flake"></div>
-                    <div class="flake"></div>
-                    </div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    
-    case 'Pluie forte':
-        icon6 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-    case 'Pluie modérée':
-        icon6 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-    case 'Pluie faible':
-        icon6 = `<div class="icon2 rainy">
-                    <div class="cloud"></div>
-                    <div class="rain"></div>
-                </div>
-                `;
-        break;
-/*--------------------------------------------------------------*/
-    default:
-      icon6 = `<div class="icon2 cloudy">
-                <div class="cloud"></div>
-                <div class="cloud"></div>
-            </div>
-            `;
-}
-/////////////////////////////////////////////////////////////////////////
-            
-            
             h_condition.innerHTML = icon;
             h_tmp.innerHTML = tmp+"°C";
             h_co.innerHTML = condition;
             h_date.innerHTML = date;
             h_city.innerHTML = city;
+////////////////////////////////////////////////////////////////////////////////////////
             
+            
+            
+            let icon2= "";
+            switch (day1_condition) {
+                case 'Ensoleillé':
+                case 'Nuit claire':
+                icon2 = weather2.sunny;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de pluie faible':
+                case 'Averses de pluie modérée':
+    
+                icon2 = weather2.sunShower;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Ciel voilé':
+                case 'Nuit légèrement voilée':
+                case 'Faibles passages nuageux':
+                case 'Nuit bien dégagée':
+                case 'Stratus':
+                case 'Stratus se dissipant':
+                case 'Nuit claire et stratus':
+                case 'Eclaircies':
 
+                icon2 = weather2.sunShowerNoRain;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Nuit avec averses':
+                case 'Averses de pluie forte':
+                case 'Couvert avec averses':
+                case 'Faiblement orageux':
+                case 'Nuit faiblement orageuse':
+                case 'Orage modéré':
+                case 'Fortement orageux':
+                    
+                icon2 = weather2.thunderStorm;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de neige faible':
+                case 'Nuit avec averses de neige faible':
+                case 'Neige faible':
+                case 'Neige modérée':
+                case 'Neige forte':
+                case 'Pluie et neige mêlée faible':
+                case 'Pluie et neige mêlée modérée':
+                case 'Pluie et neige mêlée forte':
+                    
+                icon2 = weather2.flurries;
+                break;
+    /*--------------------------------------------------------------*/
+                
+                case 'Pluie forte':
+                case 'Pluie modérée':
+                case 'Pluie faible':
+    
+                icon2 = weather2.rainy;
+                break;
+    /*--------------------------------------------------------------*/
+                default:
+                icon2 = weather2.cloudy;
+            }
+            
+////////////////////////////////////////////////////////////////////////////////////////
+                
+            let icon3= "";
+            switch (day2_condition) {
+                case 'Ensoleillé':
+                case 'Nuit claire':
+                icon3 = weather2.sunny;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de pluie faible':
+                case 'Averses de pluie modérée':
+    
+                icon3 = weather2.sunShower;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Ciel voilé':
+                case 'Nuit légèrement voilée':
+                case 'Faibles passages nuageux':
+                case 'Nuit bien dégagée':
+                case 'Stratus':
+                case 'Stratus se dissipant':
+                case 'Nuit claire et stratus':
+                case 'Eclaircies':
 
+                icon3 = weather2.sunShowerNoRain;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Nuit avec averses':
+                case 'Averses de pluie forte':
+                case 'Couvert avec averses':
+                case 'Faiblement orageux':
+                case 'Nuit faiblement orageuse':
+                case 'Orage modéré':
+                case 'Fortement orageux':
+                    
+                icon3 = weather2.thunderStorm;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de neige faible':
+                case 'Nuit avec averses de neige faible':
+                case 'Neige faible':
+                case 'Neige modérée':
+                case 'Neige forte':
+                case 'Pluie et neige mêlée faible':
+                case 'Pluie et neige mêlée modérée':
+                case 'Pluie et neige mêlée forte':
+                    
+                icon3 = weather2.flurries;
+                break;
+    /*--------------------------------------------------------------*/
+                
+                case 'Pluie forte':
+                case 'Pluie modérée':
+                case 'Pluie faible':
+    
+                icon3 = weather2.rainy;
+                break;
+    /*--------------------------------------------------------------*/
+                default:
+                icon3 = weather2.cloudy;
+            }
+            
+////////////////////////////////////////////////////////////////////////////////////////
+                
+                
+            let icon4= "";
+            switch (day3_condition) {
+                case 'Ensoleillé':
+                case 'Nuit claire':
+                icon4 = weather2.sunny;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de pluie faible':
+                case 'Averses de pluie modérée':
+    
+                icon4 = weather2.sunShower;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Ciel voilé':
+                case 'Nuit légèrement voilée':
+                case 'Faibles passages nuageux':
+                case 'Nuit bien dégagée':
+                case 'Stratus':
+                case 'Stratus se dissipant':
+                case 'Nuit claire et stratus':
+                case 'Eclaircies':
 
+                icon4 = weather2.sunShowerNoRain;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Nuit avec averses':
+                case 'Averses de pluie forte':
+                case 'Couvert avec averses':
+                case 'Faiblement orageux':
+                case 'Nuit faiblement orageuse':
+                case 'Orage modéré':
+                case 'Fortement orageux':
+                    
+                icon4 = weather2.thunderStorm;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de neige faible':
+                case 'Nuit avec averses de neige faible':
+                case 'Neige faible':
+                case 'Neige modérée':
+                case 'Neige forte':
+                case 'Pluie et neige mêlée faible':
+                case 'Pluie et neige mêlée modérée':
+                case 'Pluie et neige mêlée forte':
+                    
+                icon4 = weather2.flurries;
+                break;
+    /*--------------------------------------------------------------*/
+                
+                case 'Pluie forte':
+                case 'Pluie modérée':
+                case 'Pluie faible':
+    
+                icon4 = weather2.rainy;
+                break;
+    /*--------------------------------------------------------------*/
+                default:
+                icon4 = weather2.cloudy;
+            }
+            
+////////////////////////////////////////////////////////////////////////////////////////
+                
+                
+            let icon5= "";
+            switch (day4_condition) {
+                case 'Ensoleillé':
+                case 'Nuit claire':
+                icon5 = weather2.sunny;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de pluie faible':
+                case 'Averses de pluie modérée':
+    
+                icon5 = weather2.sunShower;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Ciel voilé':
+                case 'Nuit légèrement voilée':
+                case 'Faibles passages nuageux':
+                case 'Nuit bien dégagée':
+                case 'Stratus':
+                case 'Stratus se dissipant':
+                case 'Nuit claire et stratus':
+                case 'Eclaircies':
 
+                icon5 = weather2.sunShowerNoRain;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Nuit avec averses':
+                case 'Averses de pluie forte':
+                case 'Couvert avec averses':
+                case 'Faiblement orageux':
+                case 'Nuit faiblement orageuse':
+                case 'Orage modéré':
+                case 'Fortement orageux':
+                    
+                icon5 = weather2.thunderStorm;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de neige faible':
+                case 'Nuit avec averses de neige faible':
+                case 'Neige faible':
+                case 'Neige modérée':
+                case 'Neige forte':
+                case 'Pluie et neige mêlée faible':
+                case 'Pluie et neige mêlée modérée':
+                case 'Pluie et neige mêlée forte':
+                    
+                icon5 = weather2.flurries;
+                break;
+    /*--------------------------------------------------------------*/
+                
+                case 'Pluie forte':
+                case 'Pluie modérée':
+                case 'Pluie faible':
+    
+                icon5 = weather2.rainy;
+                break;
+    /*--------------------------------------------------------------*/
+                default:
+                icon5 = weather2.cloudy;
+            }
+            
+////////////////////////////////////////////////////////////////////////////////////////
+                
+            let icon6= "";
+            switch (day5_condition) {
+                case 'Ensoleillé':
+                case 'Nuit claire':
+                icon6 = weather2.sunny;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de pluie faible':
+                case 'Averses de pluie modérée':
+    
+                icon6 = weather2.sunShower;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Ciel voilé':
+                case 'Nuit légèrement voilée':
+                case 'Faibles passages nuageux':
+                case 'Nuit bien dégagée':
+                case 'Stratus':
+                case 'Stratus se dissipant':
+                case 'Nuit claire et stratus':
+                case 'Eclaircies':
 
+                icon6 = weather2.sunShowerNoRain;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Nuit avec averses':
+                case 'Averses de pluie forte':
+                case 'Couvert avec averses':
+                case 'Faiblement orageux':
+                case 'Nuit faiblement orageuse':
+                case 'Orage modéré':
+                case 'Fortement orageux':
+                    
+                icon6 = weather2.thunderStorm;
+                break;
+    /*--------------------------------------------------------------*/
+                case 'Averses de neige faible':
+                case 'Nuit avec averses de neige faible':
+                case 'Neige faible':
+                case 'Neige modérée':
+                case 'Neige forte':
+                case 'Pluie et neige mêlée faible':
+                case 'Pluie et neige mêlée modérée':
+                case 'Pluie et neige mêlée forte':
+                    
+                icon6 = weather2.flurries;
+                break;
+    /*--------------------------------------------------------------*/
+                
+                case 'Pluie forte':
+                case 'Pluie modérée':
+                case 'Pluie faible':
+    
+                icon6 = weather2.rainy;
+                break;
+    /*--------------------------------------------------------------*/
+                default:
+                icon6 = weather2.cloudy;
+            }
+            
+////////////////////////////////////////////////////////////////////////////////////////
+                
+                    
+            
+            
             
             let day1 = [temp.fcst_day_0.day_short, icon2, "Max "+temp.fcst_day_0.tmax, "Min "+temp.fcst_day_0.tmin];
             let day2 = [temp.fcst_day_1.day_short, icon3, "Max "+temp.fcst_day_1.tmax, "Min "+temp.fcst_day_1.tmin];

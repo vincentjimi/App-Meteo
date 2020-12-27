@@ -90,9 +90,8 @@ body .container-fluid .row .icon {
 
 body .container-fluid .row .icon2 {
   position: relative;
-  display: inline-block;
   width: 6em;
-  height: 4em;
+  height: 7em;
   color: white;
   font-size: .6em;
   /* control icon size here */
